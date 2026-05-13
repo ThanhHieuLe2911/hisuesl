@@ -1,0 +1,192 @@
+<mxfile host="app.diagrams.net" modified="2026-05-09T07:13:00.000Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" version="24.0.0" type="device">
+  <diagram id="UC06-XemTuYeuThich" name="2.4.6 Xem từ vựng yêu thích">
+    <mxGraphModel dx="1288" dy="703" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1212" pageHeight="1350" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="container" parent="1" style="swimlane;horizontal=1;container=1;collapsible=0;recursiveResize=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontColor=#000000;fontSize=12;" value="" vertex="1">
+          <mxGeometry height="1100" width="1001" x="14" y="51" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" parent="container" style="swimlane;horizontal=1;container=1;collapsible=0;recursiveResize=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontSize=14;fontStyle=1;startSize=30;resizeLast=1;" value="Người dùng" vertex="1">
+          <mxGeometry height="1099" width="350" as="geometry" />
+        </mxCell>
+        <mxCell id="start" parent="actor" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="160" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="viewFavScreen" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;arcSize=20;" value="Mở màn hình&#xa;Kho từ vựng của tôi" vertex="1">
+          <mxGeometry height="50" width="180" x="85" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="viewUnitGrid" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=15;" value="Xem danh sách các&lt;br&gt;Unit có từ yêu thích" vertex="1">
+          <mxGeometry height="45" width="170" x="77" y="376" as="geometry" />
+        </mxCell>
+        <mxCell id="selectUnit" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;arcSize=20;" value="Chọn 1 Unit&#xa;để xem chi tiết" vertex="1">
+          <mxGeometry height="45" width="160" x="82" y="485" as="geometry" />
+        </mxCell>
+        <mxCell id="viewDetail" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Xem danh sách&#xa;từ yêu thích" vertex="1">
+          <mxGeometry height="45" width="160" x="85" y="554.5" as="geometry" />
+        </mxCell>
+        <mxCell id="tapSpeaker" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;arcSize=20;" value="Nhấn nút&#xa;Loa (TTS)" vertex="1">
+          <mxGeometry height="45" width="140" x="16" y="702" as="geometry" />
+        </mxCell>
+        <mxCell id="tapDelete" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;arcSize=20;" value="Nhấn nút&#xa;Xóa (Thùng rác)" vertex="1">
+          <mxGeometry height="45" width="160" x="178" y="702" as="geometry" />
+        </mxCell>
+        <mxCell id="end" parent="actor" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="156" y="909.5" as="geometry" />
+        </mxCell>
+        <mxCell id="eStart" edge="1" parent="actor" source="start" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" target="viewFavScreen">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="175" y="91" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eDetailToSpeaker" edge="1" parent="actor" source="viewDetail" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#000000;" target="tapSpeaker">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="165" y="656" />
+              <mxPoint x="86" y="656" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eDetailToDelete" edge="1" parent="actor" source="viewDetail" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="tapDelete">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="165" y="656" />
+              <mxPoint x="236" y="656" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="system" parent="container" style="swimlane;horizontal=1;container=1;collapsible=0;recursiveResize=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontSize=14;fontStyle=1;startSize=30;resizeLast=1;" value="Hệ thống" vertex="1">
+          <mxGeometry height="1100" width="650" x="351" as="geometry" />
+        </mxCell>
+        <mxCell id="loadFavIds" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="VocabService&#xa;getFavoriteVocabIds()" vertex="1">
+          <mxGeometry height="45" width="200" x="225" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="displayEmpty" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Hiển thị icon&#xa;stars_rounded" vertex="1">
+          <mxGeometry height="45" width="170" x="469" y="234" as="geometry" />
+        </mxCell>
+        <mxCell id="displayGrid" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Hiển thị dạng lưới các Unit&lt;br&gt;với số từ đã lưu" vertex="1">
+          <mxGeometry height="50" width="230" x="29" y="295" as="geometry" />
+        </mxCell>
+        <mxCell id="loadDetail" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="VocabService&#xa;getFavoriteVocabIds() + Lọc" vertex="1">
+          <mxGeometry height="50" width="210" x="370" y="488" as="geometry" />
+        </mxCell>
+        <mxCell id="displayList" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Hiển thị ListView&#xa;từ yêu thích trong Unit" vertex="1">
+          <mxGeometry height="50" width="200" x="375" y="552" as="geometry" />
+        </mxCell>
+        <mxCell id="removeFavorite" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="VocabService&#xa;toggleFavorite()" vertex="1">
+          <mxGeometry height="45" width="190" x="396" y="702" as="geometry" />
+        </mxCell>
+        <mxCell id="showDeletedMsg" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Hiển thị&#xa;&quot;Đã xóa...&quot;" vertex="1">
+          <mxGeometry height="45" width="160" x="411" y="904" as="geometry" />
+        </mxCell>
+        <mxCell id="checkFav" parent="system" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=11;align=center;verticalAlign=middle;spacing=10;" value="Có từ&#xa;yêu thích?" vertex="1">
+          <mxGeometry height="70" width="110" x="272" y="174" as="geometry" />
+        </mxCell>
+        <mxCell id="eLoadToCheck" edge="1" parent="system" source="loadFavIds" style="endArrow=classic;html=1;rounded=0;" target="checkFav">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eNoFav" edge="1" parent="system" source="checkFav" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#000000;dashed=1;" target="displayEmpty" value="[Không]">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="510" y="206" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eYesFav" edge="1" parent="system" source="checkFav" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#000000;" target="displayGrid" value="[Có]">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="99" y="209" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="showEmptyFav" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="&quot;Bạn chưa lưu&#xa;từ vựng nào!&quot;" vertex="1">
+          <mxGeometry height="45" width="160" x="474" y="325" as="geometry" />
+        </mxCell>
+        <mxCell id="eEmptyToText" edge="1" parent="system" source="displayEmpty" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="showEmptyFav">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="playTts" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="FlutterTts&#xa;phát âm từ (en-US)" vertex="1">
+          <mxGeometry height="45" width="190" x="126" y="782" as="geometry" />
+        </mxCell>
+        <mxCell id="eSpeakerToTts" edge="1" parent="container" source="tapSpeaker" style="endArrow=classic;html=1;rounded=0;" target="playTts">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="86" y="805" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eTtsToEnd" edge="1" parent="container" source="playTts" style="endArrow=classic;html=1;rounded=0;" target="end">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="571" y="871" />
+              <mxPoint x="171" y="871" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eViewToLoad" edge="1" parent="1" source="viewFavScreen" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#000000;" target="loadFavIds">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="436" y="154" />
+              <mxPoint x="436" y="154" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eGridToActor" edge="1" parent="1" source="displayGrid" style="endArrow=classic;html=1;rounded=0;entryX=0.187;entryY=0.027;entryDx=0;entryDy=0;entryPerimeter=0;" target="viewUnitGrid">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="123" y="374" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eGridToLoad" edge="1" parent="1" source="viewUnitGrid" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#000000;" target="loadDetail">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="797" y="455" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eSelectToLoad" edge="1" parent="1" source="selectUnit" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#000000;" target="loadDetail">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="396" y="553" />
+              <mxPoint x="396" y="553" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eUnitToSelect" edge="1" parent="1" source="viewUnitGrid" style="endArrow=classic;html=1;rounded=0;" target="selectUnit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eLoadToList" edge="1" parent="1" source="loadDetail" style="endArrow=classic;html=1;rounded=0;" target="displayList">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eListToActor" edge="1" parent="1" source="displayList" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="viewDetail">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eDeleteToRemove" edge="1" parent="1" source="tapDelete" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#000000;" target="removeFavorite">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="556" y="766" />
+              <mxPoint x="556" y="766" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eRemoveToMsg" edge="1" parent="1" source="removeFavorite" style="endArrow=classic;html=1;rounded=0;" target="showDeletedMsg">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eMsgToEnd" edge="1" parent="1" source="showDeletedMsg" style="endArrow=classic;html=1;rounded=0;" target="end">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="258" y="978" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,138 @@
+<mxGraphModel dx="1373" dy="749" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="650" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    <mxCell id="container" parent="1" style="swimlane;horizontal=1;container=1;collapsible=0;recursiveResize=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontColor=#000000;fontSize=12;" value="" vertex="1">
+      <mxGeometry height="650" width="801" x="30" y="50" as="geometry" />
+    </mxCell>
+    <mxCell id="actor" parent="container" style="swimlane;horizontal=1;container=1;collapsible=0;recursiveResize=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontSize=14;fontStyle=1;startSize=30;resizeLast=1;" value="Người dùng" vertex="1">
+      <mxGeometry height="650" width="320" as="geometry" />
+    </mxCell>
+    <mxCell id="start" parent="actor" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+      <mxGeometry height="30" width="30" x="140" y="30" as="geometry" />
+    </mxCell>
+    <mxCell id="tapProfile" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;arcSize=20;" value="Nhấn icon&lt;br&gt;&lt;b&gt;HỒ SƠ&lt;/b&gt;" vertex="1">
+      <mxGeometry height="45" width="120" x="95" y="90" as="geometry" />
+    </mxCell>
+    <mxCell id="toggleSound" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;arcSize=20;" value="Bật/tắt&#xa;Sound Switch" vertex="1">
+      <mxGeometry height="45" width="110" x="5" y="240" as="geometry" />
+    </mxCell>
+    <mxCell id="selectTime" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;arcSize=20;" value="Chọn giờ" vertex="1">
+      <mxGeometry height="40" width="80" x="85" y="390" as="geometry" />
+    </mxCell>
+    <mxCell id="confirmReminder" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;arcSize=20;" value="Nhấn&#xa;XÁC NHẬN" vertex="1">
+      <mxGeometry height="40" width="100" x="75" y="472.5" as="geometry" />
+    </mxCell>
+    <mxCell id="end" parent="actor" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+      <mxGeometry height="30" width="30" x="95" y="565" as="geometry" />
+    </mxCell>
+    <mxCell id="e0" edge="1" parent="actor" source="start" style="endArrow=classic;html=1;rounded=0;" target="tapProfile">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e8" edge="1" parent="actor" source="showTimePicker" style="endArrow=classic;html=1;rounded=0;" target="selectTime">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="340" y="410" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e9" edge="1" parent="actor" source="selectTime" style="endArrow=classic;html=1;rounded=0;" target="confirmReminder">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e3" edge="1" parent="actor" source="PQ9BDCjanwEtESgZuCjy-4" style="endArrow=classic;html=1;rounded=0;" target="toggleSound">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points" />
+        <mxPoint x="112.5" y="210" as="sourcePoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="PQ9BDCjanwEtESgZuCjy-4" parent="actor" style="rhombus;whiteSpace=wrap;html=1;" value="Người dùng chọn" vertex="1">
+      <mxGeometry height="60" width="120" x="85" y="155" as="geometry" />
+    </mxCell>
+    <mxCell id="system" parent="container" style="swimlane;horizontal=1;container=1;collapsible=0;recursiveResize=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontSize=14;fontStyle=1;startSize=30;resizeLast=1;" value="Hệ thống" vertex="1">
+      <mxGeometry height="650" width="480" x="320" as="geometry" />
+    </mxCell>
+    <mxCell id="loadData" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#757575;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Load dữ liệu&#xa;từ Firestore" vertex="1">
+      <mxGeometry height="45" width="150" x="230" y="90" as="geometry" />
+    </mxCell>
+    <mxCell id="displaySettings" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#757575;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Hiển thị Settings&#xa;(Sound, Reminder)" vertex="1">
+      <mxGeometry height="50" width="180" x="215" y="160" as="geometry" />
+    </mxCell>
+    <mxCell id="saveSound" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90EE90;strokeColor=#228B22;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Lưu isSoundEnabled&#xa;vào SharedPreferences" vertex="1">
+      <mxGeometry height="45" width="200" x="50" y="240" as="geometry" />
+    </mxCell>
+    <mxCell id="showTimePicker" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#757575;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Hiện khung chọn giờ" vertex="1">
+      <mxGeometry height="40" width="150" x="200" y="390" as="geometry" />
+    </mxCell>
+    <mxCell id="saveReminder" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90EE90;strokeColor=#228B22;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Lưu giờ vào&lt;br&gt;SharedPreferences +&lt;br&gt;Đặt Thông báo" vertex="1">
+      <mxGeometry height="55" width="180" x="180" y="465" as="geometry" />
+    </mxCell>
+    <mxCell id="showSnack" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90EE90;strokeColor=#228B22;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Hiện SnackBar&#xa;&quot;Đã đặt nhắc nhở...&quot;" vertex="1">
+      <mxGeometry height="40" width="160" x="190" y="560" as="geometry" />
+    </mxCell>
+    <mxCell id="e2" edge="1" parent="system" source="loadData" style="endArrow=classic;html=1;rounded=0;" target="displaySettings">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e5" edge="1" parent="system" source="saveSound" style="endArrow=classic;html=1;rounded=0;" target="displaySettings">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e11" edge="1" parent="system" source="saveReminder" style="endArrow=classic;html=1;rounded=0;" target="showSnack">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="e12" edge="1" parent="system" source="showSnack" style="endArrow=classic;html=1;rounded=0;" target="end">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="PQ9BDCjanwEtESgZuCjy-2" edge="1" parent="container" source="displaySettings" style="endArrow=classic;html=1;rounded=0;" target="PQ9BDCjanwEtESgZuCjy-4" value="">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points" />
+        <mxPoint x="416" y="185" as="sourcePoint" />
+        <mxPoint x="190" y="187.21938775510193" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="PQ9BDCjanwEtESgZuCjy-5" edge="1" parent="container" source="toggleSound" style="endArrow=classic;html=1;rounded=0;" target="saveSound">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="60" y="323" />
+          <mxPoint x="470" y="320" />
+        </Array>
+        <mxPoint x="50" y="323" as="sourcePoint" />
+        <mxPoint x="130" y="296" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e1" edge="1" parent="1" source="tapProfile" style="endArrow=classic;html=1;rounded=0;" target="loadData">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e4" edge="1" parent="1" source="tapReminder" style="endArrow=classic;html=1;rounded=0;" target="saveSound">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e6" edge="1" parent="1" source="PQ9BDCjanwEtESgZuCjy-4" style="endArrow=classic;html=1;rounded=0;" target="tapReminder">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points" />
+        <mxPoint x="190.49999999999977" y="260" as="sourcePoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e7" edge="1" parent="1" source="tapReminder" style="endArrow=classic;html=1;rounded=0;" target="showTimePicker">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="250" y="420" />
+          <mxPoint x="625" y="420" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="e10" edge="1" parent="1" source="confirmReminder" style="endArrow=classic;html=1;rounded=0;" target="saveReminder">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="tapReminder" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;arcSize=20;" value="Nhấn&#xa;Nhắc nhở" vertex="1">
+      <mxGeometry height="45" width="100" x="200" y="290" as="geometry" />
+    </mxCell>
+  </root>
+</mxGraphModel>

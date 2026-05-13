@@ -1,0 +1,177 @@
+<mxfile host="app.diagrams.net" modified="2026-05-10T16:08:00.000Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" version="24.0.0" type="device">
+  <diagram id="UC14-Hisubot" name="2.4.14 Trò chuyện với Hisubot">
+    <mxGraphModel dx="2289" dy="1249" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="750" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="container" parent="1" style="swimlane;horizontal=1;container=1;collapsible=0;recursiveResize=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontColor=#000000;fontSize=12;" value="" vertex="1">
+          <mxGeometry height="1065" width="870" x="30" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" parent="container" style="swimlane;horizontal=1;container=1;collapsible=0;recursiveResize=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontSize=14;fontStyle=1;startSize=30;resizeLast=1;" value="Người dùng" vertex="1">
+          <mxGeometry height="1067" width="200" as="geometry" />
+        </mxCell>
+        <mxCell id="start" parent="actor" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="85" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tapHisubot" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;arcSize=20;" value="Nhấn icon&#xa;Hisubot" vertex="1">
+          <mxGeometry height="45" width="120" x="40" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="inputQuestion" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;arcSize=20;" value="Nhập câu hỏi" vertex="1">
+          <mxGeometry height="40" width="110" x="40" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="tapSend" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;arcSize=20;" value="Nhấn Gửi" vertex="1">
+          <mxGeometry height="40" width="90" x="50" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="decisionContinue" parent="actor" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=11;align=center;verticalAlign=top;spacing=10;" value="Tiếp tục&#xa;chat?" vertex="1">
+          <mxGeometry height="50" width="90" x="50" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="tapBack" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;arcSize=20;" value="Nhấn Back&#xa;(Thoát)" vertex="1">
+          <mxGeometry height="45" width="100" x="50" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="end" parent="actor" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="85" y="970" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" edge="1" parent="actor" source="start" style="endArrow=classic;html=1;rounded=0;" target="tapHisubot">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="actor" source="inputQuestion" style="endArrow=classic;html=1;rounded=0;" target="tapSend">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" edge="1" parent="actor" source="decisionContinue" style="endArrow=classic;html=1;rounded=0;" target="tapBack">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="labelNo" parent="e16" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=default;fontStyle=0;fontSize=14;" value="No" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e17" edge="1" parent="actor" source="tapBack" style="endArrow=classic;html=1;rounded=0;" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e18" edge="1" parent="actor" source="decisionContinue" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="inputQuestion">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="14" y="815" />
+              <mxPoint x="14" y="503" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="labelYes" parent="e18" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=default;fontStyle=0;fontSize=14;" value="Yes" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="system" parent="container" style="swimlane;horizontal=1;container=1;collapsible=0;recursiveResize=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontSize=14;fontStyle=1;startSize=30;resizeLast=1;" value="Hệ thống" vertex="1">
+          <mxGeometry height="1067" width="669" x="201" as="geometry" />
+        </mxCell>
+        <mxCell id="loadUserData" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#757575;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Load dữ liệu user&#xa;(name, level)" vertex="1">
+          <mxGeometry height="45" width="160" x="251" y="87" as="geometry" />
+        </mxCell>
+        <mxCell id="loadConversations" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#757575;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Load Conversations&#xa;từ Firestore" vertex="1">
+          <mxGeometry height="45" width="180" x="241" y="165" as="geometry" />
+        </mxCell>
+        <mxCell id="decisionConv" parent="system" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=11;align=center;verticalAlign=top;spacing=10;" value="Có&#xa;Conversation?" vertex="1">
+          <mxGeometry height="64" width="104" x="279" y="234" as="geometry" />
+        </mxCell>
+        <mxCell id="selectConv" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#757575;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Chọn conversation&#xa;gần nhất" vertex="1">
+          <mxGeometry height="45" width="150" x="466" y="278" as="geometry" />
+        </mxCell>
+        <mxCell id="createConv" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90EE90;strokeColor=#228B22;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Tạo conversation&#xa;mới" vertex="1">
+          <mxGeometry height="45" width="140" x="68" y="276" as="geometry" />
+        </mxCell>
+        <mxCell id="addGreeting" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#757575;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Thêm Lời chào hỏi user" vertex="1">
+          <mxGeometry height="45" width="150" x="63" y="402" as="geometry" />
+        </mxCell>
+        <mxCell id="displayChat" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#757575;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Hiển thị Chat&#xa;(messages)" vertex="1">
+          <mxGeometry height="50" width="140" x="294" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="saveUserMsg" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90EE90;strokeColor=#228B22;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Lưu message user&#xa;vào Firestore" vertex="1">
+          <mxGeometry height="45" width="170" x="274" y="615" as="geometry" />
+        </mxCell>
+        <mxCell id="callGemini" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ADD8E6;strokeColor=#4169E1;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Gọi Gemini AI" vertex="1">
+          <mxGeometry height="45" width="170" x="274" y="701" as="geometry" />
+        </mxCell>
+        <mxCell id="streamResponse" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ADD8E6;strokeColor=#4169E1;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Stream response&lt;br&gt;(hiển thị phản hồi)" vertex="1">
+          <mxGeometry height="45" width="150" x="286" y="785" as="geometry" />
+        </mxCell>
+        <mxCell id="saveAiMsg" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90EE90;strokeColor=#228B22;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Lưu response AI&#xa;vào Firestore" vertex="1">
+          <mxGeometry height="45" width="160" x="281" y="872" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="system" source="loadUserData" style="endArrow=classic;html=1;rounded=0;" target="loadConversations">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="system" source="loadConversations" style="endArrow=classic;html=1;rounded=0;" target="decisionConv">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="system" source="decisionConv" style="endArrow=classic;html=1;rounded=0;" target="selectConv">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="labelYesConv" parent="e4" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=default;fontStyle=0;fontSize=14;" value="Yes" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2" y="-7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="system" source="decisionConv" style="endArrow=classic;html=1;rounded=0;" target="createConv">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="labelNoConv" parent="e5" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=default;fontStyle=0;fontSize=14;" value="No" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="system" source="createConv" style="endArrow=classic;html=1;rounded=0;" target="addGreeting">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="system" source="addGreeting" style="endArrow=classic;html=1;rounded=0;" target="displayChat">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="system" source="selectConv" style="endArrow=classic;html=1;rounded=0;" target="displayChat">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="system" source="saveUserMsg" style="endArrow=classic;html=1;rounded=0;" target="callGemini">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="system" source="callGemini" style="endArrow=classic;html=1;rounded=0;" target="streamResponse">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="system" source="streamResponse" style="endArrow=classic;html=1;rounded=0;" target="saveAiMsg">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" edge="1" parent="system" source="saveAiMsg" style="endArrow=classic;html=1;rounded=0;" target="displayChat">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="615" y="895" />
+              <mxPoint x="615" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="tapHisubot" style="endArrow=classic;html=1;rounded=0;" target="loadUserData">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="displayChat" style="endArrow=classic;html=1;rounded=0;" target="decisionContinue">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="367" y="537" />
+              <mxPoint x="367" y="841" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="tapSend" style="endArrow=classic;html=1;rounded=0;" target="saveUserMsg">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

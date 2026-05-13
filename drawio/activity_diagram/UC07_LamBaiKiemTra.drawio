@@ -1,0 +1,224 @@
+<mxfile host="app.diagrams.net" modified="2026-05-09T07:50:00.000Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" version="24.0.0" type="device">
+  <diagram id="UC07-LamBaiKiemTra" name="2.4.7 Làm bài kiểm tra từ vựng">
+    <mxGraphModel dx="1471" dy="803" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1212" pageHeight="1350" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="container" parent="1" style="swimlane;horizontal=1;container=1;collapsible=0;recursiveResize=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontColor=#000000;fontSize=12;" value="" vertex="1">
+          <mxGeometry height="1422" width="958" x="67" y="53" as="geometry" />
+        </mxCell>
+        <mxCell id="system" parent="container" style="swimlane;horizontal=1;container=1;collapsible=0;recursiveResize=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontSize=14;fontStyle=1;startSize=30;resizeLast=1;" value="Hệ thống" vertex="1">
+          <mxGeometry height="1422" width="603" x="354" as="geometry" />
+        </mxCell>
+        <mxCell id="showOutOfHearts" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFB6C1;strokeColor=#DC143C;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Hiện Dialog&lt;br&gt;&quot;Hết tim&quot;" vertex="1">
+          <mxGeometry height="50" width="180" x="407" y="208" as="geometry" />
+        </mxCell>
+        <mxCell id="loadQuestions" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="QuestionService&lt;br&gt;getQuestionsByUnit()" vertex="1">
+          <mxGeometry height="50" width="230" x="30" y="212" as="geometry" />
+        </mxCell>
+        <mxCell id="checkAnswer" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Kiểm tra đáp án&#xa;(So sánh + Tính điểm)" vertex="1">
+          <mxGeometry height="50" width="200" x="173.5" y="388" as="geometry" />
+        </mxCell>
+        <mxCell id="correctResult" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90EE90;strokeColor=#228B22;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Cộng điểm + Streak&#xa;(Multiplier x3/x5/x10)" vertex="1">
+          <mxGeometry height="50" width="200" x="22" y="542" as="geometry" />
+        </mxCell>
+        <mxCell id="wrongResult" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFB6C1;strokeColor=#DC143C;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Trừ 1 Heart&#xa;Lưu vào _wrongAnswers" vertex="1">
+          <mxGeometry height="50" width="200" x="397" y="473" as="geometry" />
+        </mxCell>
+        <mxCell id="showStreakCelebration" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFE0;strokeColor=#DAA520;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Hiện Dialog&#xa;&quot;CHÁY QUÁ!/XUẤT SẮC!/THẦN THÁNH!&quot;" vertex="1">
+          <mxGeometry height="50" width="240" x="10" y="808" as="geometry" />
+        </mxCell>
+        <mxCell id="showQuizResult" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="QuizService.finishQuiz()&#xa;Hiện Dialog Kết quả" vertex="1">
+          <mxGeometry height="50" width="220" x="194" y="1032" as="geometry" />
+        </mxCell>
+        <mxCell id="showMistakesSheet" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Hiện BottomSheet&#xa;&quot;Ôn lại lỗi sai&quot;" vertex="1">
+          <mxGeometry height="50" width="190" x="77" y="1126" as="geometry" />
+        </mxCell>
+        <mxCell id="navigateBack" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#87CEEB;strokeColor=#4169E1;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Quay về&#xa;màn hình Từ vựng" vertex="1">
+          <mxGeometry height="50" width="180" x="313" y="1201" as="geometry" />
+        </mxCell>
+        <mxCell id="checkHeart" parent="system" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=11;align=center;verticalAlign=middle;spacing=10;" value="Còn&#xa;hearts?" vertex="1">
+          <mxGeometry height="70" width="100" x="239" y="92" as="geometry" />
+        </mxCell>
+        <mxCell id="eYesHearts" edge="1" parent="system" source="checkHeart" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#000000;" target="loadQuestions" value="[Có]">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="289" y="177" />
+              <mxPoint x="170" y="177" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eNoHearts" edge="1" parent="system" source="checkHeart" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#000000;dashed=1;" target="showOutOfHearts" value="[Không]">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="497" y="127" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="displayQuestion" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Hiển thị câu hỏi&#xa;+ Progress bar + Hearts" vertex="1">
+          <mxGeometry height="50" width="210" x="40" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="eLoadToDisplay" edge="1" parent="system" source="loadQuestions" style="endArrow=classic;html=1;rounded=0;" target="displayQuestion">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="actor" parent="system" style="swimlane;horizontal=1;container=1;collapsible=0;recursiveResize=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontSize=14;fontStyle=1;startSize=30;resizeLast=1;" value="Người dùng" vertex="1">
+          <mxGeometry height="1422" width="355" x="-354" as="geometry" />
+        </mxCell>
+        <mxCell id="start" parent="actor" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="160" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="answerQuestion" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;arcSize=20;" value="Trả lời câu hỏi&#xa;(Chọn/Nhập/Sắp xếp)" vertex="1">
+          <mxGeometry height="50" width="180" x="82" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="tapCheck" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;arcSize=20;" value="Nhấn&#xa;&quot;KIỂM TRA&quot;" vertex="1">
+          <mxGeometry height="45" width="130" x="107" y="397" as="geometry" />
+        </mxCell>
+        <mxCell id="continueQuestion" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=15;" value="Hiển thị&lt;br&gt;&quot;Chính xác!&quot;" vertex="1">
+          <mxGeometry height="45" width="140" x="20" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="seeMistake" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=15;" value="Hiển thị&lt;br&gt;&quot;Sai rồi!&quot;" vertex="1">
+          <mxGeometry height="45" width="130" x="190" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="hasStreak" parent="actor" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=11;align=center;verticalAlign=middle;spacing=10;" value="Đạt&#xa;Streak?" vertex="1">
+          <mxGeometry height="70" width="100" x="125" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="seeStreakDialog" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Xem Dialog&#xa;Streak (3/5/10)" vertex="1">
+          <mxGeometry height="45" width="150" x="80" y="920" as="geometry" />
+        </mxCell>
+        <mxCell id="viewResult" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Xem Dialog&#xa;Kết quả Bài KT" vertex="1">
+          <mxGeometry height="45" width="150" x="82" y="1037" as="geometry" />
+        </mxCell>
+        <mxCell id="reviewMistakes" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Nhấn&#xa;&quot;Xem lại lỗi sai&quot;" vertex="1">
+          <mxGeometry height="45" width="140" x="87" y="1131" as="geometry" />
+        </mxCell>
+        <mxCell id="tapFinish" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;arcSize=20;" value="Nhấn&#xa;&quot;TUYỆT VỜI&quot;" vertex="1">
+          <mxGeometry height="45" width="140" x="87" y="1206" as="geometry" />
+        </mxCell>
+        <mxCell id="end" parent="actor" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="135" y="1349" as="geometry" />
+        </mxCell>
+        <mxCell id="eStart" edge="1" parent="actor" source="start" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" target="tapUnit">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="144" y="88" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eAnswerToCheck" edge="1" parent="actor" source="answerQuestion" style="endArrow=classic;html=1;rounded=0;" target="tapCheck">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eSheetToStreak" edge="1" parent="actor" source="continueQuestion" style="endArrow=classic;html=1;rounded=0;" target="hasStreak">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eMistakeToStreak" edge="1" parent="actor" source="seeMistake" style="endArrow=classic;html=1;rounded=0;" target="hasStreak">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eDialogToResult" edge="1" parent="actor" source="seeStreakDialog" style="endArrow=classic;html=1;rounded=0;" target="viewResult">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eResultToMistake" edge="1" parent="actor" source="viewResult" style="endArrow=classic;html=1;rounded=0;" target="reviewMistakes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eSheetToFinish" edge="1" parent="actor" source="reviewMistakes" style="endArrow=classic;html=1;rounded=0;" target="tapFinish">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tapUnit" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;arcSize=20;" value="Nhấn vào Unit được chọn để kiểm tra" vertex="1">
+          <mxGeometry height="50" width="180" x="85" y="101" as="geometry" />
+        </mxCell>
+        <mxCell id="eDisplayToAnswer" edge="1" parent="system" source="displayQuestion" style="endArrow=classic;html=1;rounded=0;" target="answerQuestion">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eCheckToSystem" edge="1" parent="system" source="tapCheck" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#000000;" target="checkAnswer">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-96" y="415" />
+              <mxPoint x="-96" y="415" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eSystemToDecision" edge="1" parent="system" source="checkAnswer" style="endArrow=classic;html=1;rounded=0;" target="isCorrect">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eCorrect" edge="1" parent="system" source="isCorrect" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#000000;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="correctResult" value="[Đúng]">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="135" y="495" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eWrong" edge="1" parent="system" source="isCorrect" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="wrongResult" value="[Sai]">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="471" y="495" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eCorrectToSheet" edge="1" parent="system" source="correctResult" style="endArrow=classic;html=1;rounded=0;" target="continueQuestion">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-264" y="566" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eWrongToSheet" edge="1" parent="system" source="wrongResult" style="endArrow=classic;html=1;rounded=0;" target="seeMistake">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="497" y="657" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eStreakYes" edge="1" parent="system" source="hasStreak" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#000000;" target="showStreakCelebration" value="[Có]">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-179" y="834" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eStreakNo" edge="1" parent="system" source="hasStreak" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#000000;dashed=1;" target="showQuizResult" value="[Không]">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="314" y="765" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eCelebrationToDialog" edge="1" parent="system" source="showStreakCelebration" style="endArrow=classic;html=1;rounded=0;" target="seeStreakDialog">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="130" y="942" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eResultToReview" edge="1" parent="system" source="showQuizResult" style="endArrow=classic;html=1;rounded=0;" target="viewResult">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eMistakeToSheet" edge="1" parent="system" source="reviewMistakes" style="endArrow=classic;html=1;rounded=0;" target="showMistakesSheet">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eFinishToBack" edge="1" parent="system" source="tapFinish" style="endArrow=classic;html=1;rounded=0;" target="navigateBack">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eBackToEnd" edge="1" parent="system" source="navigateBack" style="endArrow=classic;html=1;rounded=0;" target="end">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="403" y="1361" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eTapUnitToCheck" edge="1" parent="system" source="tapUnit" style="endArrow=classic;html=1;rounded=0;" target="checkHeart">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="75" y="231" as="sourcePoint" />
+            <mxPoint x="160" y="274" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="isCorrect" parent="system" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=11;align=center;verticalAlign=middle;spacing=10;" value="Đúng&#xa;hay Sai?" vertex="1">
+          <mxGeometry height="70" width="100" x="223.5" y="463" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

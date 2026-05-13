@@ -1,0 +1,76 @@
+<mxfile host="app.diagrams.net" modified="2026-05-06T11:16:00.000Z" agent="Claude" version="24.0.0">
+  <diagram name="UC04_NhomGamification" id="uc-game">
+    <mxGraphModel dx="1030" dy="562" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3ito0apL8zlLO9_SibY1-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="430" width="790" as="geometry" />
+        </mxCell>
+        <mxCell id="bg" parent="1" style="shape=rect;fillColor=#FFFFFF;strokeColor=none;rounded=0;" value="" vertex="1">
+          <mxGeometry height="430" width="780" as="geometry" />
+        </mxCell>
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=bold;fontColor=#1a1a2e;fontFamily=Helvetica;" value="&lt;b&gt;Sơ đồ Use case nhóm chức năng Gamification&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="415" x="218" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-user" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#0099FF;strokeColor=#0066CC;fontColor=#FFFFFF;fontStyle=bold;fontSize=14;" value="" vertex="1">
+          <mxGeometry height="80" width="40" x="40" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="label-actor-user" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=bold;fontColor=#0099FF;fontFamily=Helvetica;" value="Người dùng" vertex="1">
+          <mxGeometry height="18" width="80" x="20" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-firestore" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#FFCA28;strokeColor=#C79A00;fontColor=#1a1a2e;fontStyle=bold;fontSize=11;" value="" vertex="1">
+          <mxGeometry height="70" width="40" x="700" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="label-firestore" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=bold;fontColor=#FFCA28;fontFamily=Helvetica;" value="&lt;b&gt;Cloud Firestore&lt;/b&gt;" vertex="1">
+          <mxGeometry height="18" width="110" x="665" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-shop" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#F57C00;fontColor=#E65100;fontSize=11;fontStyle=bold;verticalAlign=middle;fontFamily=Helvetica;" value="Xem Cửa hàng và Đổi Tim" vertex="1">
+          <mxGeometry height="40" width="130" x="190" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-leaderboard" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#F57C00;fontColor=#E65100;fontSize=11;fontStyle=bold;verticalAlign=middle;fontFamily=Helvetica;" value="Xem Bảng xếp hạng" vertex="1">
+          <mxGeometry height="40" width="130" x="320" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-hearts" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFCDD2;strokeColor=#D32F2F;fontColor=#B71C1C;fontSize=10;fontStyle=bold;verticalAlign=middle;fontFamily=Helvetica;" value="Hệ thống Hearts" vertex="1">
+          <mxGeometry height="40" width="130" x="490" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-points" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFECB3;strokeColor=#F9A825;fontColor=#F57F17;fontSize=10;fontStyle=bold;verticalAlign=middle;fontFamily=Helvetica;" value="Hệ thống Points &amp; Streak" vertex="1">
+          <mxGeometry height="40" width="130" x="480" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-achievements" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E1BEE7;strokeColor=#7B1FA2;fontColor=#4A148C;fontSize=10;fontStyle=bold;verticalAlign=middle;fontFamily=Helvetica;" value="Hệ thống Thành tựu" vertex="1">
+          <mxGeometry height="40" width="130" x="200" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="r1" edge="1" parent="1" source="actor-user" style="edgeStyle=none;rounded=0;html=1;strokeColor=#1a1a2e;strokeWidth=1.5;endArrow=classic;endFill=1;endSize=8;" target="uc-shop">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r2" edge="1" parent="1" source="actor-user" style="edgeStyle=none;rounded=0;html=1;strokeColor=#1a1a2e;strokeWidth=1.5;endArrow=classic;endFill=1;endSize=8;" target="uc-leaderboard">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r6" edge="1" parent="1" source="uc-shop" style="edgeStyle=none;rounded=0;html=1;strokeColor=#FFCA28;strokeWidth=1.5;endArrow=classic;endFill=1;endSize=8;dashed=1;" target="actor-firestore">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r7" edge="1" parent="1" source="uc-leaderboard" style="edgeStyle=none;rounded=0;html=1;strokeColor=#FFCA28;strokeWidth=1.5;endArrow=classic;endFill=1;endSize=8;dashed=1;" target="actor-firestore">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-include-shop-hearts" edge="1" parent="1" source="uc-shop" style="edgeStyle=none;rounded=0;html=1;strokeWidth=1;dashed=1;dashPattern=8 4;endArrow=classic;endFill=1;endSize=8;strokeColor=#757575;" target="uc-hearts">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl-include-shop-hearts" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=italic;fontColor=#616161;fontFamily=Helvetica;" value="include" vertex="1">
+          <mxGeometry height="20" width="60" x="365" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-include-leaderboard-points" edge="1" parent="1" source="uc-points" style="edgeStyle=none;rounded=0;html=1;strokeWidth=1;dashed=1;dashPattern=8 4;endArrow=classic;endFill=1;endSize=8;strokeColor=#757575;" target="uc-leaderboard">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl-include-leaderboard-points" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=italic;fontColor=#616161;fontFamily=Helvetica;" value="extend" vertex="1">
+          <mxGeometry height="20" width="60" x="460" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-include-leaderboard-achievements" edge="1" parent="1" source="uc-leaderboard" style="edgeStyle=none;rounded=0;html=1;strokeWidth=1;dashed=1;dashPattern=8 4;endArrow=classic;endFill=1;endSize=8;strokeColor=#757575;" target="uc-achievements">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl-include-leaderboard-achievements" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=italic;fontColor=#616161;fontFamily=Helvetica;" value="include" vertex="1">
+          <mxGeometry height="20" width="60" x="270" y="270" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,56 @@
+<mxfile host="app.diagrams.net" modified="2026-05-10T15:45:00.000Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" version="24.0.0" type="device">
+  <diagram id="UC13-BangXepHang" name="2.4.13 Xem Bảng Xếp Hạng">
+    <mxGraphModel dx="1212" dy="661" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="700" pageHeight="500" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="container" parent="1" style="swimlane;horizontal=1;container=1;collapsible=0;recursiveResize=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontColor=#000000;fontSize=12;" value="" vertex="1">
+          <mxGeometry height="420" width="600" x="50" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" parent="container" style="swimlane;horizontal=1;container=1;collapsible=0;recursiveResize=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontSize=14;fontStyle=1;startSize=30;resizeLast=1;" value="Người dùng" vertex="1">
+          <mxGeometry height="420" width="180" as="geometry" />
+        </mxCell>
+        <mxCell id="start" parent="actor" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="75" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tapLeaderboard" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;arcSize=20;" value="Nhấn icon&#xa;Bảng Xếp Hạng" vertex="1">
+          <mxGeometry height="45" width="130" x="25" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="viewRanking" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;arcSize=20;" value="Xem danh sách&#xa;Top 20" vertex="1">
+          <mxGeometry height="45" width="110" x="35" y="236.5" as="geometry" />
+        </mxCell>
+        <mxCell id="end" parent="actor" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="75" y="346" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" edge="1" parent="actor" source="start" style="endArrow=classic;html=1;rounded=0;" target="tapLeaderboard">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="actor" source="viewRanking" style="endArrow=classic;html=1;rounded=0;" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="system" parent="container" style="swimlane;horizontal=1;container=1;collapsible=0;recursiveResize=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontSize=14;fontStyle=1;startSize=30;resizeLast=1;" value="Hệ thống" vertex="1">
+          <mxGeometry height="420" width="420" x="181" as="geometry" />
+        </mxCell>
+        <mxCell id="loadLeaderboard" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#757575;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Load Top 20 users&lt;br&gt;có tổng điểm cao nhất" vertex="1">
+          <mxGeometry height="50" width="200" x="120" y="85" as="geometry" />
+        </mxCell>
+        <mxCell id="displayRanking" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#757575;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Hiển thị Bảng Xếp Hạng&#xa;(rank, avatar, name,&#xa;rank title, points)" vertex="1">
+          <mxGeometry height="60" width="220" x="110" y="229" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="system" source="loadLeaderboard" style="endArrow=classic;html=1;rounded=0;" target="displayRanking">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="tapLeaderboard" style="endArrow=classic;html=1;rounded=0;" target="loadLeaderboard">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="displayRanking" style="endArrow=classic;html=1;rounded=0;" target="viewRanking">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

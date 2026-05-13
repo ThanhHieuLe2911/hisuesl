@@ -1,0 +1,145 @@
+<mxfile host="app.diagrams.net" modified="2026-05-09T08:15:00.000Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" version="24.0.0" type="device">
+  <diagram id="UC08-CuaHangTim" name="2.4.8 Xem cửa hàng Tim">
+    <mxGraphModel dx="2575" dy="1405" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1212" pageHeight="1350" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="container" parent="1" style="swimlane;horizontal=1;container=1;collapsible=0;recursiveResize=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontColor=#000000;fontSize=12;" value="" vertex="1">
+          <mxGeometry height="900" width="900" x="14" y="51" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" parent="container" style="swimlane;horizontal=1;container=1;collapsible=0;recursiveResize=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontSize=14;fontStyle=1;startSize=30;resizeLast=1;" value="Người dùng" vertex="1">
+          <mxGeometry height="900" width="350" as="geometry" />
+        </mxCell>
+        <mxCell id="start" parent="actor" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="160" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tapHeartIcon" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;arcSize=20;" value="Nhấn icon Tim&#xa;(trên Home)" vertex="1">
+          <mxGeometry height="45" width="160" x="95" y="103" as="geometry" />
+        </mxCell>
+        <mxCell id="selectPackage" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;arcSize=20;" value="Chọn gói&#xa;muốn mua" vertex="1">
+          <mxGeometry height="45" width="140" x="95" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="end" parent="actor" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="150" y="822" as="geometry" />
+        </mxCell>
+        <mxCell id="eStart" edge="1" parent="actor" source="start" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" target="tapHeartIcon">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="175" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eShopToSelect" edge="1" parent="actor" source="showShopSheet" style="endArrow=classic;html=1;rounded=0;" target="selectPackage">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="622" y="204" />
+              <mxPoint x="165" y="205" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="system" parent="container" style="swimlane;horizontal=1;container=1;collapsible=0;recursiveResize=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontSize=14;fontStyle=1;startSize=30;resizeLast=1;" value="Hệ thống" vertex="1">
+          <mxGeometry height="900" width="550" x="351" as="geometry" />
+        </mxCell>
+        <mxCell id="showShopSheet" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Hiện Shop quy đổi Tim&lt;br&gt;(có 3 gói: 1/1000, 3/2500, 5/4000)" vertex="1">
+          <mxGeometry height="60" width="250" x="145" y="92" as="geometry" />
+        </mxCell>
+        <mxCell id="showLoading" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#757575;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Hiện Loading" vertex="1">
+          <mxGeometry height="45" width="210" x="152" y="274" as="geometry" />
+        </mxCell>
+        <mxCell id="checkHeartsFull" parent="system" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=11;align=center;verticalAlign=middle;spacing=10;" value="Hearts&#xa;&lt; 5?" vertex="1">
+          <mxGeometry height="70" width="100" x="207" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="checkPoints" parent="system" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=11;align=center;verticalAlign=middle;spacing=10;" value="Points&#xa;&gt;= Cost?" vertex="1">
+          <mxGeometry height="70" width="100" x="402" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="showHeartsFullError" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFB6C1;strokeColor=#DC143C;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Hiện SnackBar&#xa;&quot;Tim đã đầy rồi!&quot;" vertex="1">
+          <mxGeometry height="45" width="180" x="25" y="467" as="geometry" />
+        </mxCell>
+        <mxCell id="showPointsError" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFB6C1;strokeColor=#DC143C;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Hiện SnackBar&#xa;&quot;Không đủ điểm!&quot;" vertex="1">
+          <mxGeometry height="45" width="180" x="362" y="594" as="geometry" />
+        </mxCell>
+        <mxCell id="processBuy" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90EE90;strokeColor=#228B22;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Transaction:&#xa;- Trừ Points&#xa;- Cộng Hearts&#xa;- Giữ lastHeartUpdate" vertex="1">
+          <mxGeometry height="60" width="200" x="157" y="586.5" as="geometry" />
+        </mxCell>
+        <mxCell id="hideLoading" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#757575;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Tắt Loading" vertex="1">
+          <mxGeometry height="35" width="100" x="246" y="688" as="geometry" />
+        </mxCell>
+        <mxCell id="closeShop" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#757575;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Tắt Shop" vertex="1">
+          <mxGeometry height="35" width="80" x="256" y="753" as="geometry" />
+        </mxCell>
+        <mxCell id="showSuccessDialog" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90EE90;strokeColor=#228B22;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Hiện Dialog&#xa;&quot;Thành công! Bạn đã nhận được X tim&quot;" vertex="1">
+          <mxGeometry height="50" width="240" x="176" y="812" as="geometry" />
+        </mxCell>
+        <mxCell id="eLoadingToHearts" edge="1" parent="system" source="showLoading" style="endArrow=classic;html=1;rounded=0;" target="checkHeartsFull">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eHeartsToPoints" edge="1" parent="system" source="checkHeartsFull" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="checkPoints" value="[Có]">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="453" y="385" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eHeartsNo" edge="1" parent="system" source="checkHeartsFull" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#000000;dashed=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="showHeartsFullError" value="[Không]">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="207" y="383" />
+              <mxPoint x="110" y="383" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ePointsToProcess" edge="1" parent="system" source="checkPoints" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#000000;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="processBuy" value="[Đủ]">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="402" y="458" />
+              <mxPoint x="260" y="458" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ePointsNo" edge="1" parent="system" source="checkPoints" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#000000;dashed=1;" target="showPointsError" value="[Không đủ]">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eHeartsToLoading2" edge="1" parent="system" source="showHeartsFullError" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="hideLoading">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="114" y="706" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ePointsToLoading2" edge="1" parent="system" source="showPointsError" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="hideLoading">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="452" y="706" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eProcessToHide" edge="1" parent="system" source="processBuy" style="endArrow=classic;html=1;rounded=0;entryX=0.114;entryY=-0.043;entryDx=0;entryDy=0;entryPerimeter=0;" target="hideLoading">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eHideToClose" edge="1" parent="system" source="hideLoading" style="endArrow=classic;html=1;rounded=0;" target="closeShop">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eCloseToSuccess" edge="1" parent="system" source="closeShop" style="endArrow=classic;html=1;rounded=0;" target="showSuccessDialog">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eTapToShop" edge="1" parent="1" source="tapHeartIcon" style="endArrow=classic;html=1;rounded=0;" target="showShopSheet">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eSelectToLoading" edge="1" parent="1" source="selectPackage" style="endArrow=classic;html=1;rounded=0;" target="showLoading">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eSuccessToEnd" edge="1" parent="1" source="showSuccessDialog" style="endArrow=classic;html=1;rounded=0;" target="end">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

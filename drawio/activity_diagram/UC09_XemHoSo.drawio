@@ -1,0 +1,98 @@
+<mxfile host="app.diagrams.net" modified="2026-05-09T08:55:00.000Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" version="24.0.0" type="device">
+  <diagram id="UC09-XemHoSo" name="2.4.9 Xem hồ sơ &amp; Check Achievement">
+    <mxGraphModel dx="1717" dy="937" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="700" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="container" parent="1" style="swimlane;horizontal=1;container=1;collapsible=0;recursiveResize=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontColor=#000000;fontSize=12;" value="" vertex="1">
+          <mxGeometry height="790" width="798" x="20" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" parent="container" style="swimlane;horizontal=1;container=1;collapsible=0;recursiveResize=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontSize=14;fontStyle=1;startSize=30;resizeLast=1;" value="Người dùng" vertex="1">
+          <mxGeometry height="789" width="200" as="geometry" />
+        </mxCell>
+        <mxCell id="start" parent="actor" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="85" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tapProfile" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;arcSize=20;" value="Nhấn icon&#xa;Hồ sơ" vertex="1">
+          <mxGeometry height="45" width="120" x="40" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="viewProfile" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;arcSize=20;" value="Xem thông tin&#xa;(Header, Rank,&#xa;Stats, Settings)" vertex="1">
+          <mxGeometry height="55" width="120" x="56" y="586" as="geometry" />
+        </mxCell>
+        <mxCell id="end" parent="actor" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="101" y="716" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" edge="1" parent="actor" source="start" style="endArrow=classic;html=1;rounded=0;" target="tapProfile">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="actor" source="viewProfile" style="endArrow=classic;html=1;rounded=0;" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="system" parent="container" style="swimlane;horizontal=1;container=1;collapsible=0;recursiveResize=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontSize=14;fontStyle=1;startSize=30;resizeLast=1;" value="Hệ thống" vertex="1">
+          <mxGeometry height="790" width="597" x="201" as="geometry" />
+        </mxCell>
+        <mxCell id="loadData" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#757575;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Load dữ liệu&#xa;từ Firestore" vertex="1">
+          <mxGeometry height="45" width="150" x="247" y="93" as="geometry" />
+        </mxCell>
+        <mxCell id="checkAchievement" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90EE90;strokeColor=#228B22;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Check các thành tựu&lt;br&gt;(checkAndClaimAchievements)" vertex="1">
+          <mxGeometry height="45" width="200" x="222" y="167" as="geometry" />
+        </mxCell>
+        <mxCell id="decision" parent="system" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=11;align=center;verticalAlign=middle;spacing=10;" value="Có thành&#xa;tựu mới?" vertex="1">
+          <mxGeometry height="60" width="90" x="277" y="237" as="geometry" />
+        </mxCell>
+        <mxCell id="showDialog" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90EE90;strokeColor=#228B22;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Hiện Dialog&#xa;&quot;THÀNH TỰU MỚI!&quot;" vertex="1">
+          <mxGeometry height="45" width="160" x="14" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="PQ9BDCjanwEtESgZuCjy-1" edge="1" parent="system" source="displayProfile" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="displayProfileNoDialog" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="displayProfile" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#757575;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Hiển thị Profile&#xa;(Header, Rank, Stats,&#xa;Achievements, Settings)" vertex="1">
+          <mxGeometry height="60" width="220" x="212" y="327" as="geometry" />
+        </mxCell>
+        <mxCell id="displayProfileNoDialog" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#757575;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Hiển thị Profile&#xa;(Header, Rank, Stats,&#xa;Achievements, Settings)" vertex="1">
+          <mxGeometry height="60" width="220" x="212" y="476" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="system" source="loadData" style="endArrow=classic;html=1;rounded=0;" target="checkAchievement">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="system" source="checkAchievement" style="endArrow=classic;html=1;rounded=0;" target="decision">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="system" source="decision" style="endArrow=classic;html=1;rounded=0;" target="showDialog">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="93" y="267" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="labelYes" parent="e4" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#228B22;fontStyle=1;fontSize=14;" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Yes&lt;/font&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="system" source="showDialog" style="endArrow=classic;html=1;rounded=0;" target="displayProfileNoDialog">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="system" source="decision" style="endArrow=classic;html=1;rounded=0;" target="displayProfile">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="labelNo" parent="e6" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#DC143C;fontStyle=1;fontSize=14;" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;No&lt;/font&gt;" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="tapProfile" style="endArrow=classic;html=1;rounded=0;" target="loadData">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="displayProfileNoDialog" style="endArrow=classic;html=1;rounded=0;" target="viewProfile">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="543" y="664" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

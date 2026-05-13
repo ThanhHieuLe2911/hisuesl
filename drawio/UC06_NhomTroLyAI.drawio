@@ -1,0 +1,76 @@
+<mxfile host="app.diagrams.net" modified="2026-05-06T11:33:00.000Z" agent="Claude" version="24.0.0">
+  <diagram name="UC06_NhomTroLyAI" id="uc-ai">
+    <mxGraphModel dx="1717" dy="937" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="3ito0apL8zlLO9_SibY1-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="440" width="850" as="geometry" />
+        </mxCell>
+        <mxCell id="bg" parent="1" style="shape=rect;fillColor=#FFFFFF;strokeColor=none;rounded=0;" value="" vertex="1">
+          <mxGeometry height="440" width="850" as="geometry" />
+        </mxCell>
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=bold;fontColor=#1a1a2e;fontFamily=Helvetica;" value="&lt;b&gt;Sơ đồ Use case nhóm chức năng Trợ lý ảo Hisubot&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="455" x="198" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-user" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#0099FF;strokeColor=#0066CC;fontColor=#FFFFFF;fontStyle=bold;fontSize=14;" value="" vertex="1">
+          <mxGeometry height="80" width="40" x="40" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="label-actor-user" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=bold;fontColor=#0099FF;fontFamily=Helvetica;" value="Người dùng" vertex="1">
+          <mxGeometry height="18" width="80" x="20" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="actor-hisubot" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#00BCD4;strokeColor=#00838F;fontColor=#FFFFFF;fontStyle=bold;fontSize=11;" value="" vertex="1">
+          <mxGeometry height="70" width="40" x="760" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="label-hisubot" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=bold;fontColor=#00BCD4;fontFamily=Helvetica;" value="Hisubot AI" vertex="1">
+          <mxGeometry height="18" width="100" x="730" y="272" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-chat" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E0F7FA;strokeColor=#006064;fontColor=#006064;fontSize=11;fontStyle=bold;verticalAlign=middle;fontFamily=Helvetica;" value="Chat với Hisubot" vertex="1">
+          <mxGeometry height="40" width="130" x="170" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-vocab-qa" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E0F7FA;strokeColor=#006064;fontColor=#006064;fontSize=11;fontStyle=bold;verticalAlign=middle;fontFamily=Helvetica;" value="Hỏi đáp từ vựng" vertex="1">
+          <mxGeometry height="40" width="130" x="420" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-suggest" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E0F7FA;strokeColor=#006064;fontColor=#006064;fontSize=11;fontStyle=bold;verticalAlign=middle;fontFamily=Helvetica;" value="Nhận gợi ý học tập" vertex="1">
+          <mxGeometry height="40" width="130" x="405" y="268" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-support" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E0F7FA;strokeColor=#006064;fontColor=#006064;fontSize=11;fontStyle=bold;verticalAlign=middle;fontFamily=Helvetica;" value="Hỗ trợ kỹ thuật" vertex="1">
+          <mxGeometry height="40" width="130" x="320" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="r1" edge="1" parent="1" source="actor-user" style="edgeStyle=none;rounded=0;html=1;strokeColor=#1a1a2e;strokeWidth=1.5;endArrow=classic;endFill=1;endSize=8;" target="uc-chat">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r6" edge="1" parent="1" source="uc-chat" style="edgeStyle=none;rounded=0;html=1;strokeColor=#00BCD4;strokeWidth=1.5;endArrow=classic;endFill=1;endSize=8;dashed=1;" target="actor-hisubot">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r7" edge="1" parent="1" source="uc-vocab-qa" style="edgeStyle=none;rounded=0;html=1;strokeColor=#00BCD4;strokeWidth=1.5;endArrow=classic;endFill=1;endSize=8;dashed=1;" target="actor-hisubot">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r8" edge="1" parent="1" source="uc-suggest" style="edgeStyle=none;rounded=0;html=1;strokeColor=#00BCD4;strokeWidth=1.5;endArrow=classic;endFill=1;endSize=8;dashed=1;" target="actor-hisubot">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r9" edge="1" parent="1" source="uc-support" style="edgeStyle=none;rounded=0;html=1;strokeColor=#00BCD4;strokeWidth=1.5;endArrow=classic;endFill=1;endSize=8;dashed=1;" target="actor-hisubot">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-include-chat-vocab" edge="1" parent="1" source="uc-chat" style="edgeStyle=none;rounded=0;html=1;strokeWidth=1;dashed=1;dashPattern=8 4;endArrow=classic;endFill=1;endSize=8;strokeColor=#757575;" target="uc-vocab-qa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl-include-chat-vocab" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=italic;fontColor=#616161;fontFamily=Helvetica;rotation=0;" value="include" vertex="1">
+          <mxGeometry height="20" width="60" x="365" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-include-chat-suggest" edge="1" parent="1" source="uc-chat" style="edgeStyle=none;rounded=0;html=1;strokeWidth=1;dashed=1;dashPattern=8 4;endArrow=classic;endFill=1;endSize=8;strokeColor=#757575;" target="uc-suggest">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-include-chat-support" edge="1" parent="1" source="uc-chat" style="edgeStyle=none;rounded=0;html=1;strokeWidth=1;dashed=1;dashPattern=8 4;endArrow=classic;endFill=1;endSize=8;strokeColor=#757575;" target="uc-support">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl-include-chat-support" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=italic;fontColor=#616161;fontFamily=Helvetica;" value="include" vertex="1">
+          <mxGeometry height="20" width="60" x="345" y="248" as="geometry" />
+        </mxCell>
+        <mxCell id="3ito0apL8zlLO9_SibY1-4" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=italic;fontColor=#616161;fontFamily=Helvetica;rotation=0;" value="include" vertex="1">
+          <mxGeometry height="20" width="60" x="260" y="300" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

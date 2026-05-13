@@ -1,0 +1,95 @@
+<mxfile host="app.diagrams.net" modified="2026-05-09T06:11:00.000Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" version="24.0.0" type="device">
+  <diagram id="UC02-DangNhap" name="2.4.2 Đăng nhập tài khoản">
+    <mxGraphModel dx="896" dy="489" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1212" pageHeight="1350" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="container" parent="1" style="swimlane;horizontal=1;container=1;collapsible=0;recursiveResize=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontColor=#000000;fontSize=12;" value="" vertex="1">
+          <mxGeometry height="700" width="814" x="14" y="51" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" parent="container" style="swimlane;horizontal=1;container=1;collapsible=0;recursiveResize=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontSize=14;fontStyle=1;startSize=30;resizeLast=1;" value="Người dùng" vertex="1">
+          <mxGeometry height="700" width="300" as="geometry" />
+        </mxCell>
+        <mxCell id="input" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;arcSize=20;" value="Nhập Email,&#xa;Password" vertex="1">
+          <mxGeometry height="50" width="180" x="60" y="89" as="geometry" />
+        </mxCell>
+        <mxCell id="click" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Nhấn nút&#xa;ĐĂNG NHẬP" vertex="1">
+          <mxGeometry height="45" width="150" x="73" y="172.5" as="geometry" />
+        </mxCell>
+        <mxCell id="success" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=15;" value="Đăng nhập&#xa;thành công!" vertex="1">
+          <mxGeometry height="40" width="140" x="80" y="569" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" parent="actor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" source="input" target="click">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="start" parent="actor" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="135" y="39" as="geometry" />
+        </mxCell>
+        <mxCell id="eStart" parent="actor" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="start" target="input">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="150" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="end" parent="actor" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="135" y="644" as="geometry" />
+        </mxCell>
+        <mxCell id="eEnd" parent="actor" style="endArrow=classic;html=1;rounded=0;" edge="1" source="success" target="end">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="239" y="617" as="sourcePoint" />
+            <mxPoint x="294" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="system" parent="container" style="swimlane;horizontal=1;container=1;collapsible=0;recursiveResize=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontSize=14;fontStyle=1;startSize=30;resizeLast=1;" value="Hệ thống" vertex="1">
+          <mxGeometry height="700" width="511" x="301" y="-1" as="geometry" />
+        </mxCell>
+        <mxCell id="validate" parent="system" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=11;align=center;verticalAlign=middle;spacing=10;" value="Email &amp; Password&#xa;hợp lệ?" vertex="1">
+          <mxGeometry height="80" width="130" x="268" y="156" as="geometry" />
+        </mxCell>
+        <mxCell id="auth" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Firebase Auth&#xa;đăng nhập" vertex="1">
+          <mxGeometry height="42" width="160" x="253" y="328" as="geometry" />
+        </mxCell>
+        <mxCell id="check" parent="system" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=11;align=center;verticalAlign=middle;spacing=10;" value="Đăng nhập&#xa;thành công?" vertex="1">
+          <mxGeometry height="60" width="120" x="273" y="448" as="geometry" />
+        </mxCell>
+        <mxCell id="home" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Màn hình chính" vertex="1">
+          <mxGeometry height="38" width="160" x="253" y="571" as="geometry" />
+        </mxCell>
+        <mxCell id="eValidate" parent="system" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#000000;fontColor=#000000;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" source="validate" target="auth" value="[đúng]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eAuth" parent="system" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" source="auth" target="check">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eCheckSuccess" parent="system" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#000000;fontColor=#000000;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" source="check" target="home" value="[thành công]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eClickToValidate" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#000000;" edge="1" source="click" target="validate">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eSuccessToSuccess" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#000000;fontColor=#000000;fontSize=10;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="home" target="success" value="thành công">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eValidateFail" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#000000;dashed=1;fontColor=#000000;fontSize=10;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" source="validate" target="input" value="[sai] sửa lại">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="581" y="246" />
+              <mxPoint x="581" y="297" />
+              <mxPoint x="25" y="297" />
+              <mxPoint x="25" y="169" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eCheckFail" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#000000;dashed=1;fontColor=#000000;fontSize=10;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" source="check" target="click" value="[thất bại] nhập lại">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="47" y="528" />
+              <mxPoint x="47" y="246" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

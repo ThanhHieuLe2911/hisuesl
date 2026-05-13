@@ -1,0 +1,110 @@
+<mxfile host="app.diagrams.net" modified="2026-05-09T08:55:00.000Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" version="24.0.0" type="device">
+  <diagram id="UC10-ChinhSuaHoSo" name="2.4.10 Chỉnh sửa hồ sơ">
+    <mxGraphModel dx="1471" dy="803" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="800" pageHeight="600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="container" parent="1" style="swimlane;horizontal=1;container=1;collapsible=0;recursiveResize=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontColor=#000000;fontSize=12;" value="" vertex="1">
+          <mxGeometry height="500" width="700" x="50" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" parent="container" style="swimlane;horizontal=1;container=1;collapsible=0;recursiveResize=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontSize=14;fontStyle=1;startSize=30;resizeLast=1;" value="Người dùng" vertex="1">
+          <mxGeometry height="500" width="180" as="geometry" />
+        </mxCell>
+        <mxCell id="start" parent="actor" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="75" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tapEdit" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;arcSize=20;" value="Nhấn icon&#xa;Edit" vertex="1">
+          <mxGeometry height="45" width="110" x="35" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="editInfo" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;arcSize=20;" value="Chỉnh sửa&#xa;Name/Avatar" vertex="1">
+          <mxGeometry height="45" width="110" x="37" y="173" as="geometry" />
+        </mxCell>
+        <mxCell id="tapSave" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;arcSize=20;" value="Nhấn Lưu" vertex="1">
+          <mxGeometry height="40" width="90" x="47" y="253" as="geometry" />
+        </mxCell>
+        <mxCell id="end" parent="actor" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="75" y="442" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" edge="1" parent="actor" source="start" style="endArrow=classic;html=1;rounded=0;" target="tapEdit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="actor" source="editInfo" style="endArrow=classic;html=1;rounded=0;" target="tapSave">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="system" parent="container" style="swimlane;horizontal=1;container=1;collapsible=0;recursiveResize=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontSize=14;fontStyle=1;startSize=30;resizeLast=1;" value="Hệ thống" vertex="1">
+          <mxGeometry height="500" width="520" x="181" as="geometry" />
+        </mxCell>
+        <mxCell id="openEditScreen" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#757575;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Mở màn hình&amp;nbsp;&lt;div&gt;chỉnh sửa Hồ sơ&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="160" x="180" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="displayEditForm" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#757575;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Hiển thị form&#xa;(Name, Avatar)" vertex="1">
+          <mxGeometry height="45" width="140" x="190" y="173" as="geometry" />
+        </mxCell>
+        <mxCell id="validate" parent="system" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=11;align=center;verticalAlign=middle;spacing=10;" value="Dữ liệu&#xa;hợp lệ?" vertex="1">
+          <mxGeometry height="50" width="80" x="220" y="248" as="geometry" />
+        </mxCell>
+        <mxCell id="showError" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFB6C1;strokeColor=#DC143C;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Hiện lỗi&#xa;(nếu có)" vertex="1">
+          <mxGeometry height="40" width="100" x="69" y="341" as="geometry" />
+        </mxCell>
+        <mxCell id="saveToFirestore" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90EE90;strokeColor=#228B22;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Lưu Name/Avatar&#xa;xuống Firestore" vertex="1">
+          <mxGeometry height="45" width="170" x="340" y="346" as="geometry" />
+        </mxCell>
+        <mxCell id="backToProfile" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#757575;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Quay về màn hình Hồ sơ" vertex="1">
+          <mxGeometry height="40" width="150" x="350" y="437" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="system" source="openEditScreen" style="endArrow=classic;html=1;rounded=0;" target="displayEditForm">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="system" source="validate" style="endArrow=classic;html=1;rounded=0;" target="showError">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="labelNo" parent="e6" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=default;fontStyle=1;fontSize=14;labelBackgroundColor=none;" value="No" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="system" source="showError" style="endArrow=classic;html=1;rounded=0;" target="editInfo">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-170" y="363" />
+              <mxPoint x="-170" y="197" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="system" source="validate" style="endArrow=classic;html=1;rounded=0;" target="saveToFirestore">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="labelYes" parent="e8" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=default;fontStyle=1;fontSize=14;" value="Yes" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="system" source="saveToFirestore" style="endArrow=classic;html=1;rounded=0;" target="backToProfile">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="tapEdit" style="endArrow=classic;html=1;rounded=0;" target="openEditScreen">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="displayEditForm" style="endArrow=classic;html=1;rounded=0;" target="editInfo">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="291" y="246" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="tapSave" style="endArrow=classic;html=1;rounded=0;" target="validate">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="backToProfile" style="endArrow=classic;html=1;rounded=0;" target="end">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,99 @@
+<mxfile host="app.diagrams.net" modified="2026-05-09T06:40:00.000Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" version="24.0.0" type="device">
+  <diagram id="UC04-XemChuDe" name="2.4.4 Xem chủ đề từ vựng">
+    <mxGraphModel dx="1373" dy="749" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1212" pageHeight="1350" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="container" parent="1" style="swimlane;horizontal=1;container=1;collapsible=0;recursiveResize=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=1;fontColor=#000000;fontSize=12;" value="" vertex="1">
+          <mxGeometry height="587" width="1002" x="14" y="51" as="geometry" />
+        </mxCell>
+        <mxCell id="actor" parent="container" style="swimlane;horizontal=1;container=1;collapsible=0;recursiveResize=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontSize=14;fontStyle=1;startSize=30;resizeLast=1;" value="Người dùng" vertex="1">
+          <mxGeometry height="586" width="350" as="geometry" />
+        </mxCell>
+        <mxCell id="start" parent="actor" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="160" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="clickTabVocab" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;arcSize=20;" value="Nhấn tab&lt;br&gt;&lt;b&gt;TỪ VỰNG&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="180" x="85" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="viewTopics" parent="actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=15;" value="Xem danh sách&#xa;chủ đề từ vựng" vertex="1">
+          <mxGeometry height="45" width="170" x="90" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="chooseAction" parent="actor" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=11;align=center;verticalAlign=middle;spacing=10;" value="Chọn&#xa;hành động?" vertex="1">
+          <mxGeometry height="70" width="120" x="115" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="end" parent="actor" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="160" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="eStart" edge="1" parent="actor" source="start" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" target="clickTabVocab">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="175" y="91" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eTabToView" edge="1" parent="actor" source="clickTabVocab" style="endArrow=classic;html=1;rounded=0;" target="viewTopics">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eViewToDecision" edge="1" parent="actor" source="viewTopics" style="endArrow=classic;html=1;rounded=0;" target="chooseAction">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="system" parent="container" style="swimlane;horizontal=1;container=1;collapsible=0;recursiveResize=0;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontColor=#000000;fontSize=14;fontStyle=1;startSize=30;resizeLast=1;" value="Hệ thống" vertex="1">
+          <mxGeometry height="586" width="651" x="351" as="geometry" />
+        </mxCell>
+        <mxCell id="loadTopics" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="TopicService&#xa;tải danh sách topics" vertex="1">
+          <mxGeometry height="45" width="170" x="240" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="displayGrid" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Hiển thị Grid&#xa;các topic cards" vertex="1">
+          <mxGeometry height="45" width="160" x="245" y="181" as="geometry" />
+        </mxCell>
+        <mxCell id="eLoadToDisplay" edge="1" parent="system" source="loadTopics" style="endArrow=classic;html=1;rounded=0;" target="displayGrid">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="favDrawer" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#87CEEB;strokeColor=#4169E1;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Mở màn hình&#xa;Xem từ yêu thích" vertex="1">
+          <mxGeometry height="45" width="170" x="349" y="303.5" as="geometry" />
+        </mxCell>
+        <mxCell id="flashcardScreen" parent="system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#87CEEB;strokeColor=#4169E1;strokeWidth=2;fontSize=12;align=center;verticalAlign=middle;fontStyle=1;arcSize=20;" value="Mở màn hình&#xa;Học Flashcard" vertex="1">
+          <mxGeometry height="45" width="170" x="49" y="303.5" as="geometry" />
+        </mxCell>
+        <mxCell id="eDisplayToView" edge="1" parent="1" source="displayGrid" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#000000;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="viewTopics">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eClickToLoad" edge="1" parent="1" source="clickTabVocab" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#000000;" target="loadTopics">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="341" y="153" />
+              <mxPoint x="341" y="153" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eFavAction" edge="1" parent="1" source="chooseAction" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#000000;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="favDrawer" value="[Xem từ&#xa;yêu thích]">
+          <mxGeometry relative="1" x="0.1114" y="15" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="40" y="376" />
+              <mxPoint x="40" y="473" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eFlashcardAction" edge="1" parent="1" source="chooseAction" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="flashcardScreen" value="[Chọn&#xa;topic]">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eFavToActor" edge="1" parent="1" source="favDrawer" style="endArrow=classic;html=1;rounded=0;exitX=0.291;exitY=1.041;exitDx=0;exitDy=0;exitPerimeter=0;" target="end">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="762" y="586" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eFlashcardToActor" edge="1" parent="1" source="flashcardScreen" style="endArrow=classic;html=1;rounded=0;" target="end">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="501" y="586" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

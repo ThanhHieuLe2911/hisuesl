@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Nếu file tồn tại → phục vụ trực tiếp (CSS, JS, hình ảnh)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite về index.php
+RewriteBase /hisuesl_backend/
+RewriteRule ^(.*)$ index.php [QSA,L]
