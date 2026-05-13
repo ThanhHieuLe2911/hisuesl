@@ -97,7 +97,7 @@ cd backend
 # DB_PASS=your_password
 ```
 
-Cấu hình web server (Apache/Nginx) trỏ vào thư mục `backend/` với URL ví dụ: `http://192.168.1.40/hisuesl_backend/api/`
+Cấu hình web server (Apache/Nginx) trỏ vào thư mục `backend/` với URL ví dụ: `http://192.168.1.xx/hisuesl_backend/api/`
 
 ### 3. Chạy ứng dụng
 
